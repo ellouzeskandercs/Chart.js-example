@@ -1,0 +1,37 @@
+<!-- Load bootstrap CSS-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<body class="h-100">
+  <div class="h-100 d-flex flex-row justify-content-center">
+    <div class="d-flex flex-column col-sm-6 align-items-center justify-content-center">
+      <div class="w-100 d-flex flex-row">
+        <label for="european-town" class="col-sm-6 col-form-label">European capital</label>
+        <select id="european-town-select-elt" class="col-sm-6 form-control"></select>    
+      </div>
+      <div class="w-100 d-flex flex-row mt-1">
+        <label for="temperatures" class="col-sm-6 col-form-label">Temperatures</label>
+        <div class="form-check mt-2">
+          <input class="form-check-input" type="checkbox" id="min-curve-include-checkbox" checked>
+          <label class="form-check-label"> Min </label>
+        </div>
+        <div class="form-check mt-2 ml-2">
+          <input class="form-check-input" type="checkbox" id="max-curve-include-checkbox" checked>
+          <label class="form-check-label"> Max </label>
+        </div>
+      </div>
+      <button type="button" style="margin-top: 18px" class="btn btn-primary pull-right" onclick="callApi()">Refresh</button>
+    </div>
+    <div class="d-flex flex-column col-sm-6 align-items-center justify-content-center">
+      <canvas id="myChart"></canvas>
+    </div>  
+  </div>
+</body>
+
+<!-- Load Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Load bootstrap JS-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Load index.js file -->
+<script src="index.js"></script>
